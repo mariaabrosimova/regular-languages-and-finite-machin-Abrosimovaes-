@@ -1,0 +1,686 @@
+Задание 1
+1)
+digraph G {
+    rankdir=LR;
+  subgraph cluster_0 {
+    // style=filled;
+    // color=lightgrey;
+    // node [style=filled,color=white];
+     
+     N0 [shape=plaintext, label="start"]; #style=invis
+     N0-> q1;
+     q1[shape = circle];
+     q1->q1 [label="a,b", shape = doublecircle];
+     q1-> q2[label=" c ", shape = polygon];
+     q2->q2 [label="a,b"];
+     q2[shape = doublecircle]
+     
+    label = "Task 1.1";
+  }
+}
+
+2)digraph 12 {
+  rankdir=LR;
+  subgraph cluster_0 {
+   
+  N0 [shape=plaintext, label="start"];
+  node [shape = doublecircle]; q2, q0, q1;
+  node [shape = circle];
+  N0 -> q0;
+  q0 -> q1 [label = "a"];
+  q1 -> q2 [label = "a"];
+  
+  q0 -> q0 [label = "b"];
+  q1 -> q1 [label = "b"];
+  q2 -> q2 [label = "b"];
+    label = "Task 1.2  L1 ";
+  }
+}
+
+
+digraph 12 {
+  rankdir=LR;
+  subgraph cluster_0 {
+   
+    N0 [shape=plaintext, label="start"];
+    p1,p2 [shape = "circle"]
+    p3 [shape = "doublecircle"]
+    N0->p1
+    p1->p1 [label="a"]
+    p1->p2 [label="b"]
+    p2->p2 [label="a"]
+    p2->p3 [label="b"]
+    p3->p3 [label="a,b"]
+    label = "Task 1.2  L2 ";
+  }
+}
+
+digraph 12 {
+  rankdir=LR;
+  subgraph cluster_0 {
+   
+    N0 [shape=plaintext, label="start"];
+    q1p1,q1p2,q2p1,q2p2,q3p1,q3p2 [shape = "circle"]
+    q1p3,q2p3,q3p3 [shape = "doublecircle"]
+    N0->q1p1
+    q1p1->q2p1[label="a"]
+    q1p2->q2p2[label="a"]
+    q1p3->q2p3[label="a"]
+    q2p1->q3p1[label="a"]
+    q2p2->q3p2[label="a"]
+    q2p3->q3p3[label="a"]
+    
+    q1p1->q1p2[label="b"]
+    q1p2->q1p3[label="b"]
+    q1p3->q1p3[label="b"]
+    q2p1->q2p2[label="b"]
+    q2p2->q2p3[label="b"]
+    q2p3->q2p3[label="b"]
+    
+    q3p1->q3p2[label="b"]
+    q3p2->q3p3[label="b"]
+    q3p3->q3p3[label="b"]
+    label = "Task 1.2  L ";
+  }
+}
+
+Задание 2
+1.
+digraph A1 {
+    rankdir=LR;
+  subgraph cluster_0 {
+    // style=filled;
+    // color=lightgrey;
+    // node [style=filled,color=white];
+     N0 [shape=plaintext, label="start"]; #style=invis
+     N0-> q1;
+     q1->q1 [label="b"];
+     q1-> q2[label=" a ", shape = polygon];
+     q2->q2 [label="b"];
+     q2->q3 [label="a"];
+     q3[shape = doublecircle]
+     q3->q3 [label="a, b"];
+     
+    label = "Task 2.1. Automat A1";
+  }
+}
+digraph A2 {
+    rankdir=LR;
+  subgraph cluster_0 {
+     N0 [shape=plaintext, label="start"]; #style=invis
+     N0-> q4;
+     q4->q4 [label="a"];
+     q4-> q5[label=" b ", shape = polygon];
+     q5->q5 [label="a"];
+     q5->q6 [label="b"];
+     q6[shape = doublecircle]
+     q6->q6 [label="a, b"];
+     
+    label = "Task 2.1. Automat A2";
+  }
+}
+
+2) L11
+digraph G {
+    rankdir=LR;
+    subgraph cluster_0 {
+    node [shape = doublecircle]; q3;
+    node [shape = circle];
+    q0 -> q1 [label = "a,b"];
+    q1 -> q2 [label = "a,b"];
+    q2 -> q3 [label = "a,b"];
+    q3 -> q3 [label = "a, b"];
+     
+    label = "Task 2.2 L11";
+  }
+}
+
+L12
+digraph L12 {
+    rankdir=LR;
+    subgraph cluster_0 {
+    
+    node [shape = doublecircle]; p1;
+    node [shape = circle];
+    p0 -> p1 [label = "a,b"];
+    p1 -> p0 [label = "a,b"];
+     
+    label = "Task 2.2 L12";
+  }
+}
+
+
+L2
+digraph L2 {
+    rankdir=LR;
+    subgraph cluster_0 {
+    
+    node [shape = doublecircle] q3p1;
+    node [shape = circle];
+    q0p0 -> q1p1 [label = "a,b"];
+    q0p1 -> q1p0 [label = "a,b"];
+    q1p0 -> q2p1 [label = "a,b"];
+    q1p1 -> q2p0 [label = "a,b"];
+    q2p0 -> q3p1 [label = "a,b"];
+    q2p1 -> q3p0 [label = "a,b"];
+    q3p0 -> q3p1 [label = "a,b"];
+    q3p1 -> q3p0 [label = "a,b"];
+     
+    label = "Task 2.2 L2";
+  }
+}
+
+
+3)
+
+digraph L3 {
+     rankdir=LR;
+    subgraph cluster_0 {
+  node [shape = doublecircle] q0p0;
+  node [shape = circle];
+  q0p0 -> q1p0 [label = "a"];
+  q0p0 -> q0p1 [label = "b"];
+  q0p1 -> q1p1 [label = "a"];
+  q0p1 -> q0p2 [label = "b"];
+  q0p2 -> q1p2 [label = "a"];
+  q0p2 -> q0p0 [label = "b"];
+  q1p0 -> q0p0 [label = "a"];
+  q1p0 -> q1p1 [label = "b"];
+  q1p1 -> q0p1 [label = "a"];
+  q1p1 -> q1p2 [label = "b"];
+  q1p2 -> q0p2 [label = "a"];
+  q1p2 -> q1p0 [label = "b"];
+    label = "Task 2.3 L3";
+  }
+}
+
+
+2.4)digraph L4 {
+     rankdir=LR;
+    subgraph cluster_0 {
+    node [shape = doublecircle] q0p1,q1p0,q1p1,q0p2,q1p2;
+  node [shape = circle];
+  q0p0 -> q1p0 [label = "a"];
+  q0p0 -> q0p1 [label = "b"];
+  q0p1 -> q1p1 [label = "a"];
+  q0p1 -> q0p2 [label = "b"];
+  q0p2 -> q1p2 [label = "a"];
+  q0p2 -> q0p0 [label = "b"];
+  q1p0 -> q0p0 [label = "a"];
+  q1p0 -> q1p1 [label = "b"];
+  q1p1 -> q0p1 [label = "a"];
+  q1p1 -> q1p2 [label = "b"];
+  q1p2 -> q0p2 [label = "a"];
+  q1p2 -> q1p0 [label = "b"];
+  
+    label = "Task 2.4 L4";
+  }
+}
+
+2.5) 
+digraph L2 {
+  rankdir=LR;
+  subgraph cluster_0 {
+  node [shape = doublecircle] q3;
+  node [shape = circle];
+  q0 -> q1 [label = "a,b"];
+  q1 -> q2 [label = "a,b"];
+  q2 -> q3 [label = "a,b"];
+  q3 -> q4 [label = "a,b"];
+  q4 -> q3 [label = "a,b"];
+  q5 -> q4 [label = "a,b"];
+  q6 -> q5 [label = "a,b"];
+  q7 -> q6 [label = "a,b"];
+  
+    label = "Task 2.5 L2";
+  }
+}
+
+
+L4
+
+
+digraph L4 {
+  rankdir=RL;
+  subgraph cluster_0 {
+  node [shape = doublecircle] p1, p2, p3, p4, p5;
+  node [shape = circle];
+  
+  
+  N0 [shape=plaintext, label="start"]; #style=invis
+  N0-> p0;
+
+  
+  p0 -> p1 [label = "a"];
+  p1 -> p0 [label = "a"];
+  p0 -> p5 [label = "b"];
+  
+  p2 -> p0 [label = "b"];
+  p2 -> p3 [label = "a"];
+  p3 -> p2 [label = "a"];
+  p3 -> p1 [label = "b"];
+  
+  p1 -> p4 [label = "b"];
+  p4 -> p3 [label = "b"];
+  p4 -> p5 [label = "a"];
+  p5 -> p4 [label = "a"];
+  p5 -> p2 [label = "b"];
+  
+    label = "Task 2.5 L4";
+  }
+}
+
+
+L5
+
+digraph L5 {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #style=invis
+    N0-> q0p0;
+
+  node [shape = doublecircle] q3p5, q3p2,q3p3,q3p4,q3p1;
+  node [shape = circle];
+
+  q0p0 -> q1p1 [label = "a"];
+  q0p0 -> q1p5 [label = "b"];
+  q0p1 -> q1p0 [label = "a"];
+  q0p1 -> q1p4 [label = "b"];
+  q0p2 -> q1p3 [label = "a"];
+  q0p2 -> q1p0 [label = "b"];
+  q0p3 -> q1p2 [label = "a"];
+  q0p3 -> q1p1 [label = "b"];
+  q0p4 -> q1p5 [label = "a"];
+  q0p4 -> q1p3 [label = "b"];
+  q0p5 -> q1p4 [label = "a"];
+  q0p5 -> q1p2 [label = "b"];
+  
+  
+  q1p0 -> q2p1 [label = "a"];
+  q1p0 -> q2p5 [label = "b"];
+  q1p1 -> q2p0 [label = "a"];
+  q1p1 -> q2p4 [label = "b"];
+  q1p2 -> q2p3 [label = "a"];
+  q1p2 -> q2p0 [label = "b"];
+  q1p3 -> q2p2 [label = "a"];
+  q1p3 -> q2p1 [label = "b"];
+  q1p4 -> q2p5 [label = "a"];
+  q1p4 -> q2p3 [label = "b"];
+  q1p5 -> q2p4 [label = "a"];
+  q1p5 -> q2p2 [label = "b"];
+  
+  q2p0 -> q3p1 [label = "a"];
+  q2p0 -> q3p5 [label = "b"];
+  q2p1 -> q3p0 [label = "a"];
+  q2p1 -> q3p4 [label = "b"];
+  q2p2 -> q3p3 [label = "a"];
+  q2p2 -> q3p0 [label = "b"];
+  q2p3 -> q3p2 [label = "a"];
+  q2p3 -> q3p1 [label = "b"];
+  q2p4 -> q3p5 [label = "a"];
+  q2p4 -> q3p3 [label = "b"];
+  q2p5 -> q3p4 [label = "a"];
+  q2p5 -> q3p2 [label = "b"];
+  
+  q3p0 -> q4p1 [label = "a"];
+  q3p0 -> q4p5 [label = "b"];
+  q3p1 -> q4p0 [label = "a"];
+  q3p1 -> q4p4 [label = "b"];
+  q3p2 -> q4p3 [label = "a"];
+  q3p2 -> q4p0 [label = "b"];
+  q3p3 -> q4p2 [label = "a"];
+  q3p3 -> q4p1 [label = "b"];
+  q3p4 -> q4p5 [label = "a"];
+  q3p4 -> q4p3 [label = "b"];
+  q3p5 -> q4p4 [label = "a"];
+  q3p5 -> q4p2 [label = "b"];
+  
+  q4p0 -> q3p1 [label = "a"];
+  q4p0 -> q3p5 [label = "b"];
+  q4p1 -> q3p0 [label = "a"];
+  q4p1 -> q3p4 [label = "b"];
+  q4p2 -> q3p3 [label = "a"];
+  q4p2 -> q3p0 [label = "b"];
+  q4p3 -> q3p2 [label = "a"];
+  q4p3 -> q3p1 [label = "b"];
+  q4p4 -> q3p5 [label = "a"];
+  q4p4 -> q3p3 [label = "b"];
+  q4p5 -> q3p4 [label = "a"];
+  q4p5 -> q3p2 [label = "b"];
+  
+  q5p0 -> q4p1 [label = "a"];
+  q5p0 -> q4p5 [label = "b"];
+  q5p1 -> q4p0 [label = "a"];
+  q5p1 -> q4p4 [label = "b"];
+  q5p2 -> q4p3 [label = "a"];
+  q5p2 -> q4p0 [label = "b"];
+  q5p3 -> q4p2 [label = "a"];
+  q5p3 -> q4p1 [label = "b"];
+  q5p4 -> q4p5 [label = "a"];
+  q5p4 -> q4p3 [label = "b"];
+  q5p5 -> q4p4 [label = "a"];
+  q5p5 -> q4p2 [label = "b"];
+  
+  
+  q6p0 -> q5p1 [label = "a"];
+  q6p0 -> q5p5 [label = "b"];
+  q6p1 -> q5p0 [label = "a"];
+  q6p1 -> q5p4 [label = "b"];
+  q6p2 -> q5p3 [label = "a"];
+  q6p2 -> q5p0 [label = "b"];
+  q6p3 -> q5p2 [label = "a"];
+  q6p3 -> q5p1 [label = "b"];
+  q6p4 -> q5p5 [label = "a"];
+  q6p4 -> q5p3 [label = "b"];
+  q6p5 -> q5p4 [label = "a"];
+  q6p5 -> q5p2 [label = "b"];
+  
+  
+  q7p0 -> q6p1 [label = "a"];
+  q7p0 -> q6p5 [label = "b"];
+  q7p1 -> q6p0 [label = "a"];
+  q7p1 -> q6p4 [label = "b"];
+  q7p2 -> q6p3 [label = "a"];
+  q7p2 -> q6p0 [label = "b"];
+  q7p3 -> q6p2 [label = "a"];
+  q7p3 -> q6p1 [label = "b"];
+  q7p4 -> q6p5 [label = "a"];
+  q7p4 -> q6p3 [label = "b"];
+  q7p5 -> q6p4 [label = "a"];
+  q7p5 -> q6p2 [label = "b"];
+  
+    label = "Task 2.5 L5";
+  }
+}
+
+
+
+3.1
+
+digraph ab {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #style=invis
+    node[shape=circle] p0,p1;
+    node[shape=doublecircle] p2;
+    N0->p0;
+    p0->p1 [label="a"];
+    p1->p2 [label="b"];
+    label = "Task 3.1 ab";
+  }
+}
+
+
+
+digraph aba {
+  rankdir=LR;
+
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #style=invis
+    node[shape=circle] q0,q1,q2;
+    node[shape=doublecircle] q3;
+    N0->q0;
+    q0->q1 [label="a"];
+    q1->q2 [label="b"];
+    q2->q3 [label="a"];
+    label = "Task 3.1 aba";
+  }
+}
+
+
+объединение
+
+digraph ab {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #style=invis
+    node[shape=circle] pq1, p0, p1,q0,q1,q2;
+    node[shape=doublecircle] pq2;
+    N0->pq1;
+    pq1->p0 [label="λ"]
+    pq1->q0 [label="λ"]
+    q0->q1 [label="a"];
+    q1->q2 [label="b"];
+    q2->pq2[label="a"];
+    p0->p1 [label="a"];
+    p1->pq2 [label="b"];
+    label = "Task 3.1 ab + aba";
+  }
+}
+
+
+конкатенация
+digraph ab {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #ptyle=invip
+     node[shape=circle] pq1,p0,p1,q0,q1,q2,pq2;
+    node[shape=doublecircle] pq3;
+    N0->pq1;
+    pq1->pq2 [label="λ"];
+    pq1->p0 [label="λ"];
+    pq1->q0 [label="λ"];
+    q0->q1 [label="a"];
+    q1->q2 [label="b"];
+    q2->pq2 [label="a"];
+    p0->p1 [label="a"];
+    p1->pq2 [label="b"];
+    pq2->pq1[label="λ"];
+    pq2->pq3[label="a"];
+    label = "Task 3.1 НКА с конкатенацией";
+  }
+}
+
+
+3_1
+
+
+digraph 3_1 {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #ptyle=invip
+     node[shape=circle] 1,2,3,4;
+    node[shape=doublecircle] 5;
+    N0->1;
+    1->2 [label="a"];
+    1->3 [label="a"];
+    1->5 [label="a"];
+    2->1 [label="b"];
+    3->4 [label="b"];
+    4->1 [label="a"];
+    label = "Task 3.1 ";
+  }
+}
+
+
+ДКА
+
+digraph 32 {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #ptyle=invip
+    node [shape = doublecircle]; 2;
+    node [shape = circle];
+    rankdir=LR; 
+    N0 -> 1;
+    1 -> 2 [label = "a"];
+    2 -> 35 [label = "a"];
+    35 -> 4 [label = "a"];
+    35 -> 2 [label = "b"];
+    4 -> 3 [label = "b"];
+    3 -> 4 [label = "a"];
+    3 -> 2 [label = "b"];
+    label = "Task 3.2 ДКА ";
+  }
+}
+
+Минимиз
+digraph 32 {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #ptyle=invip
+    node [shape = doublecircle] 2;
+    node [shape = circle];
+    rankdir=LR; 
+    N0 -> 1;
+    1 -> 2 [label = "a"];
+    2 -> 3 [label = "a"];
+    3 -> 4 [label = "a"];
+    3 -> 2 [label = "b"];
+    4 -> 3 [label = "b"];
+    label = "Task 3.2 Минимизированный ДКА (После соединения вершин 3 и 35) ";
+  }
+}
+
+
+
+3.3
+digraph 33 {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #ptyle=invip
+    node [shape = doublecircle]1;
+    node [shape = circle];
+    rankdir=LR; 
+    N0 -> 1;
+    1 -> 1 [label = "a"];
+    1 -> 2 [label = "a,b"];
+    2 -> 3 [label = "a,b"];
+    3 -> 1 [label = "b"];
+    label = "Task 3.3 НКА ";
+  }
+}
+
+
+
+
+digraph 33 {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #ptyle=invip
+    node [shape = doublecircle] 1,12,123,13;
+    node [shape = circle];
+    rankdir=LR; 
+    N0 -> 1;
+    1 -> 12 [label = "a"];
+    123 -> 123 [label = "a,b"];
+    23 -> 3 [label = "a"];
+    1 -> 2 [label = "b"];
+    12 -> 23 [label = "b"];
+    12 -> 123 [label = "a"];
+    2 -> 3 [label = "a,b"];
+    23 -> 13 [label = "b"];
+    3 -> 1 [label = "b"];
+    13 -> 12 [label = "a,b"];
+
+    label = "Task 3.3 ДКА ";
+  }
+}
+
+34
+
+digraph 34 {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #ptyle=invip
+    node [shape = doublecircle] 257;
+    node [shape = circle];
+    rankdir=LR; 
+     N0 -> 1;
+    1 -> 257 [label = "b, c"];
+    257 -> 3 [label = "a"];
+    257 -> 6 [label = "b"];
+    3 -> 4 [label = "b"];
+    4 -> 257 [label = "c"];
+    4 -> 3 [label = "a"];
+    6 -> 257 [label = "a"];
+
+    label = "Task 3.4 Минимизированный ДКА ";
+  }
+}
+
+3.5 НКА
+digraph 35 {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #ptyle=invip
+    node [shape=doublecircle] q11;
+    node [shape=circle];
+    N0 ->q1;
+    q1->q2 [label="a,b"];
+    q2->q1 [label="a,b"];
+    q2->q3 [label="a"];
+    q2->q4 [label="b"];
+    q3->q5 [label="b"];
+    q3->q9 [label="a"];
+    q4->q6 [label="a"];
+    q4->q10 [label="b"];
+    q5->q7 [label="a"];
+    q6->q8 [label="b"];
+    q7->q9 [label="b"];
+    q8->q10 [label="a"];
+    q9->q11 [label="a,b"];
+    q10->q11 [label="a,b"];
+    q11->q11 [label="a,b"];
+
+    label = "Task 3.5 НКА ";
+  }
+}
+
+
+ДКА
+digraph 35 {
+  rankdir=LR;
+  subgraph cluster_0 {
+    N0 [shape=plaintext, label="start"]; #ptyle=invip
+   
+    node [shape=doublecircle] q1q3q11, q2q5q11, q1q3q7q11, q2q9q11, q2q5q9q11, q1q4q11, q2q6q11, q1q4q8q11, q2q6q10q11, q2q10q11;
+    node [shape=circle];
+	rankdir=LR;
+	N0->q1;
+    q1 -> q2 [label="a,b"];
+    q2 -> q1q3 [label="a"];
+    q2 -> q1q4 [label="b"];
+    q1q3 -> q2q9 [label="a"];
+    q1q3 -> q2q5 [label="b"];
+    q2q5 -> q1q3q7 [label="a"];
+    q2q5 -> q1q4 [label="b"];
+    q1q4 -> q2q6 [label="a"];
+    q1q4 -> q2q10 [label="b"];
+    q2q6 -> q1q3 [label="a"];
+    q2q6 -> q1q4q8 [label="b"];
+    q1q4q8 -> q2q6q10 [label="a"];
+    q1q4q8 -> q2q10 [label="b"];
+    q2q6q10 -> q1q3q11 [label="a"];
+    q2q6q10 -> q1q4q8q11 [label="b"];
+    q2q10 -> q1q3q11 [label="a"];
+    q2q10 -> q1q4q11 [label="b"];
+    q1q3q7 -> q2q9 [label="a"];
+    q1q3q7 -> q2q5q9 [label="b"];
+    q2q9 -> q1q3q11 [label="a"];
+    q2q9 -> q1q4q11 [label="b"];
+    q1q3q11 -> q2q9q11 [label="a"];
+    q1q3q11 -> q2q5q11 [label="b"];
+    q2q5q11 -> q1q3q7q11 [label="a"];
+    q2q5q11 -> q1q4q11 [label="b"];
+    q2q5q9 -> q1q4q11 [label="b"];
+    q2q5q9 -> q1q3q7q11 [label="a"];
+    q2q5q9 -> q1q4q11 [label="b"];
+    q1q3q7q11 -> q2q9q11 [label="a"];
+    q1q3q7q11 -> q2q5q9q11 [label="b"];
+    q2q9q11 -> q1q4q11 [label="b"];
+    q2q5q9q11 -> q1q3q7q11 [label="a"];
+    q2q5q9q11 -> q1q4q11 [label="b"];
+    q1q4q11 -> q2q6q11 [label="a"];
+    q1q4q11 -> q2q10q11 [label="b"];
+    q2q6q11 -> q1q4q8q11 [label="b"];
+    q1q4q8q11 -> q2q6q10q11 [label="a"];
+    q1q4q8q11 -> q2q10q11 [label="b"];
+    q2q6q10q11 -> q1q3q11 [label="a"];
+    q2q6q10q11 -> q1q4q8q11 [label="b"];
+    q2q10q11 -> q1q3q11 [label="a"];
+    q2q10q11 -> q1q4q11 [label="b"];
+
+    label = "Task 3.5 ДКА ";
+  }
+}
